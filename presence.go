@@ -5,7 +5,12 @@ import (
 	"log"
 )
 
-func settempHandler(echoReq *alexa.EchoRequest, echoResp *alexa.EchoResponse) {
+const (
+	Goodbye = "Goodbye"
+	Hello   = "Hello"
+)
+
+func presenceHandler(echoReq *alexa.EchoRequest, echoResp *alexa.EchoResponse, away bool) {
 	item, err := lookupItem(echoReq)
 	if err != nil {
 		response := lookupErrorResponse(ResponseUnknownItem)
@@ -13,9 +18,14 @@ func settempHandler(echoReq *alexa.EchoRequest, echoResp *alexa.EchoResponse) {
 		log.Printf("Unknown item")
 		return
 	}
-	degree, _ := echoReq.GetSlotValue("Degree")
-	log.Printf("Sending %s for item %s", degree, item)
-	err = oh.SendCommand(item, degree)
+	var action string
+	if away {
+		action = "OFF"
+	} else {
+		action = "ON"
+	}
+	log.Printf("Sending %s for item %s", action, item)
+	err = oh.SendCommand(item, action)
 	if err != nil {
 		response := lookupErrorResponse(OpenHABFailed)
 		echoResp.OutputSpeech(response)

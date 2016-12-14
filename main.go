@@ -9,6 +9,7 @@ import (
 	"flag"
 	"io/ioutil"
 	"log"
+	"strings"
 )
 
 const (
@@ -74,6 +75,10 @@ func OpenHABIntentHandler(echoReq *alexa.EchoRequest, echoResp *alexa.EchoRespon
 		switchHandler(echoReq, echoResp)
 	case "SetTemp":
 		settempHandler(echoReq, echoResp)
+	case "SetPresenceHome":
+		presenceHandler(echoReq, echoResp, false)
+	case "SetPresenceAway":
+		presenceHandler(echoReq, echoResp, true)
 	default:
 		echoResp.OutputSpeech(lookupErrorResponse(UnknownCommand))
 	}
@@ -88,10 +93,19 @@ func lookupAction(actionName string) string {
 }
 
 func lookupItem(echoReq *alexa.EchoRequest) (string, error) {
-	location, err := echoReq.GetSlotValue("Location")
-	if err != nil {
+	var location string
+	var err error
+	if echoReq.GetIntentName() == "SetTemp" {
+		location = "heizung"
+	}
+	if strings.HasPrefix(echoReq.GetIntentName(), "SetPresence") {
+		location = "presence"
+	}
+	location, err = echoReq.GetSlotValue("Location")
+	if err != nil || location == "" {
 		location = "default"
 	}
+
 	itemName, err := echoReq.GetSlotValue("ItemName")
 	if err != nil {
 		return "", ItemNotFound

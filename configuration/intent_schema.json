@@ -81,6 +81,14 @@
           "type": "MODE_TYPE"
         }
       ]
+    },
+    {
+      "intent": "SetPresenceHome",
+      "slots": []
+    },
+    {
+      "intent": "SetPresenceAway",
+      "slots": []
     }
   ]
 }
