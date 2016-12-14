@@ -1,0 +1,5 @@
+Switch Schalte {ItemName} {Action}
+Switch Schalte {ItemName} im {Location} {Action}
+SetTemp Heize {Location} auf {Degree}
+SetTemp ich hätte gerne {Degree} Grad im {Location}
+SetTemp ich hätte gerne {Degree} Grad in {Location}

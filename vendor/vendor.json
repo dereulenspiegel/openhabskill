@@ -1,0 +1,49 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "L/ICb9RP0mT3gLM5L7+4W0kAjHc=",
+			"path": "github.com/codegangsta/negroni",
+			"revision": "cd9734011043904139c24dbad9a71b21f1586f36",
+			"revisionTime": "2016-11-27T19:24:14Z"
+		},
+		{
+			"checksumSHA1": "dKAn5N3v6dqImfg1Ys0CEvvoDQM=",
+			"path": "github.com/dereulenspiegel/openhab-cli/openhab",
+			"revision": "c8e459c9950cff3a8ca1f95d836733d43712d1ef",
+			"revisionTime": "2016-01-19T12:27:26Z"
+		},
+		{
+			"checksumSHA1": "iIUYZyoanCQQTUaWsu8b+iOSPt4=",
+			"path": "github.com/gorilla/context",
+			"revision": "aed02d124ae4a0e94fea4541c8effd05bf0c8296",
+			"revisionTime": "2016-05-25T20:33:19Z"
+		},
+		{
+			"checksumSHA1": "urMd7A9QPAJYY0GZJL9qBhlUmD8=",
+			"path": "github.com/gorilla/mux",
+			"revision": "757bef944d0f21880861c2dd9c871ca543023cba",
+			"revisionTime": "2016-09-20T23:08:13Z"
+		},
+		{
+			"checksumSHA1": "q69nZnvX0turx2UbCLfja/hxftc=",
+			"path": "github.com/mikeflynn/go-alexa/skillserver",
+			"revision": "be4dadfaaae4b6ab1607db0ff1556f77640012e9",
+			"revisionTime": "2016-12-14T11:46:13Z"
+		},
+		{
+			"checksumSHA1": "R/78aUkYhx4sbclbFAgAFRkyWPc=",
+			"path": "github.com/pkg/errors",
+			"revision": "494e70f7620561491c2ca11e185bbef4b70060da",
+			"revisionTime": "2016-06-16T07:40:57Z"
+		},
+		{
+			"checksumSHA1": "Hs7pfHDSvTNtnRogAAziW2Lki3M=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "53feefa2559fb8dfa8d81baad31be332c97d6c77",
+			"revisionTime": "2015-09-24T14:23:14Z"
+		}
+	],
+	"rootPath": "github.com/dereulenspiegel/openhabskill"
+}

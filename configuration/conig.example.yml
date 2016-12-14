@@ -1,0 +1,24 @@
+applicationid: test
+userid: test
+openhab: http://openhab:8080
+greeting: Zu ihren Diensten
+items:
+  licht:
+    wohnzimmer: Light_Livingroom
+    schlafzimmer: Light_Bedroom
+  heizung:
+    wohnzimmer: Temp_Livingroom
+    schlafzimmer: TempBedroom
+    küche: DesiredTempKitchen
+    badezimmer: Temp_Bathroom
+
+action:
+  ein: ON
+  aus: OFF
+
+errorresponses:
+  UnknwownItem: Dieses Gerät kenne ich nicht
+  OpenHABFailed: OpenHAB kann das nicht tun
+
+successresponse:
+  default: Sofort
