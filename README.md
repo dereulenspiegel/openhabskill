@@ -14,18 +14,18 @@ to control your Home through [openHAB](https://github.com/openhab/openhab).
 
 # Features
 
-[x] Switch items on and off
-[x] Set a presence switch via pre determined greetings
-[x] Set temperature
-[ ] Template voice responses
-[ ] Get state of items
-[ ] Set scenes
-[ ] Generate utterances from templates
+- [x] Switch items on and off
+- [x] Set a presence switch via pre determined greetings
+- [x] Set temperature
+- [ ] Template voice responses
+- [ ] Get state of items
+- [ ] Set scenes
+- [ ] Generate utterances from templates
 
 # Language support
-[x] German
-[ ] UK English
-[ ] US English
+- [x] German
+- [ ] UK English
+- [ ] US English
 
 # Howto
 
