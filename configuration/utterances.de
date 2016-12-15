@@ -1,5 +1,18 @@
 Switch Schalte {ItemName} {Action}
+Switch Schalte der {ItemName} {Action}
+Switch Schalte die {ItemName} {Action}
+Switch Schalte das {ItemName} {Action}
 Switch Schalte {ItemName} im {Location} {Action}
-SetTemp Heize {Location} auf {Degree}
+Switch Schalte der {ItemName} im {Location} {Action}
+Switch Schalte die {ItemName} im {Location} {Action}
+Switch Schalte das {ItemName} im {Location} {Action}
+SetTemp Heize {Location} auf {Degree} Grad
 SetTemp ich hätte gerne {Degree} Grad im {Location}
 SetTemp ich hätte gerne {Degree} Grad in {Location}
+SetTemp ich hätte gere im {Location} {Degree} Grad
+SetTemp ich hätte gere in {Location} {Degree} Grad
+SetPresenceHome Hallo
+SetPresenceHome Ich bin wieder da
+SetPresenceAway Auf wiedersehen
+SetPresenceAway Ich bin dann mal weg
+SetPresenceAway Tschüss

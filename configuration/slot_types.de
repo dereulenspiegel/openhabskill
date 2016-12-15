@@ -8,6 +8,8 @@ ITEM_NAME:
 Licht
 Heizung
 Rollo
+Mediacenter
+Warmwasser
 
 LOCATION_TYPE:
 Alle
@@ -22,3 +24,8 @@ MODE_TYPE:
 Wohnung
 Alle
 Wohnzimmer
+
+MODE_NAME:
+Morgens
+Abends
+Tagsüber
