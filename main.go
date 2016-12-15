@@ -94,21 +94,23 @@ func lookupAction(actionName string) string {
 
 func lookupItem(echoReq *alexa.EchoRequest) (string, error) {
 	var location string
+	var itemName string
 	var err error
+
+	itemName, err = echoReq.GetSlotValue("ItemName")
+	if err != nil {
+		itemName = "default"
+	}
 	if echoReq.GetIntentName() == "SetTemp" {
-		location = "heizung"
+		itemName = "heizung"
 	}
-	if strings.HasPrefix(echoReq.GetIntentName(), "SetPresence") {
-		location = "presence"
-	}
+
 	location, err = echoReq.GetSlotValue("Location")
 	if err != nil || location == "" {
 		location = "default"
 	}
-
-	itemName, err := echoReq.GetSlotValue("ItemName")
-	if err != nil {
-		return "", ItemNotFound
+	if strings.HasPrefix(echoReq.GetIntentName(), "SetPresence") {
+		itemName = "presence"
 	}
 
 	if items, ok := config.Items[itemName]; ok {
